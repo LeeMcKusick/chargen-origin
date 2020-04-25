@@ -1,6 +1,16 @@
 extends layout
 
 block content
-  h1= title
+  h1=title
   p Welcome to #{title}
   p Bootstrap2
+
+  div.origin
+    h3 Origin
+    p Parents: 
+    case Math.floor(Math.random() * Math.floor(100)) + 1
+      when >50
+        p You don't know your parents.
+      default
+        p You know your parents.
+      
